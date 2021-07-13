@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Do You Love Me</h1>
+    <button onclick="" style="position: absolute;left: 50px;top: 80px">Yes</button>
+    <button id="chu" onmouseover="chuu()" style="position: absolute;left: 100px;top: 80px">No</button>
+</form>
+</body>
+<script>
+    function chuu(){
+        let x_moi = Math.round(Math.random() * 100) + 100;
+        let y_moi = Math.round(Math.random() * 100) + 100;
+
+        let no_button = document.getElementById("chu");
+        no_button.style.left = x_moi + 'px';
+        no_button.style.top = y_moi + 'px';
+    }
+</script>
+</html>

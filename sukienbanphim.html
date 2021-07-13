@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="otodo" src="thuchanhnamnhuan/anh/ảnh oto.jpg" style="position: absolute; left: 0px; top: 0px" height="360" width="360"/>
+</body>
+<script>
+      // tao phim len
+    function len (){
+      let element = document.getElementById('otodo');
+      element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+
+          // tao phim xuong
+      function xuong (){
+      let element = document.getElementById('otodo');
+      element.style.top = parseInt(element.style.top) + 5 + 'px';
+      }
+
+      // tao phim sang trai
+      function trai(){
+      let element = document.getElementById('otodo');
+      element.style.left = parseInt(element.style.left) - 5 + 'px';
+      }
+
+      // tao phim sang phai
+      function phai(){
+      let element = document.getElementById('otodo');
+      element.style.left = parseInt(element.style.left) + 5 + 'px';
+      }
+
+      function movehim(event){
+      switch (event.keyCode){
+        case 87 :
+          len();
+          break;
+          case 83 :
+            xuong();
+            break;
+            case 65 :
+              trai();
+              break;
+              case 68 :
+                phai();
+                break;
+      }
+      }
+      function docReady(){
+      window.addEventListener('keydown',movehim);
+      }
+</script>
+</html>

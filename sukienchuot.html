@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form>
+<!--    Tạo dao diện-->
+    <img id="anh" src="thuchanhnamnhuan/anh/ảnh otoo2.jpg" width="160" height="160"/>
+    <p>Click chuột để oto di chuyển </p>
+    <button type="button" onclick="moveright()">Click me</button>
+</form>
+</body>
+<script>
+        // Tạo biến để lưu ảnh
+    let img = null;
+    function movehim (){
+        img = document.getElementById('anh');
+        img.style.position = 'relative';
+        img.style.left = "0px ";
+    }
+
+    // tao ham de tang khoang cach
+    function moveright(){
+        img.style.left = parseInt(img.style.left)+ 10 + 'px';
+    }
+        window.onload = movehim();
+
+</script>
+</html>

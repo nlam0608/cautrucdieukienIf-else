@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table , td {
+            border: 0px solid white;
+        }
+        td {
+            padding: 5px;
+        }
+        .o{
+            height: 40px;
+            width: 40px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr style="background-color: orange">
+            <td colspan="4"><input type="text" id="tinhtoan"></td>
+        </tr>
+        <tr style="background-color: hotpink">
+            <td><input type="button" onclick="calculator(value)" value="1" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="2" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="3" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="+" class="o"></td>
+        </tr>
+        <tr style="background-color: yellowgreen">
+            <td><input type="button" onclick="calculator(value)" value="4" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="5" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="6" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="-" class="o"></td>
+        </tr>
+        <tr style="background-color: blueviolet">
+            <td><input type="button" onclick="calculator(value)" value="7" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="8" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="9" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="*" class="o"></td>
+        </tr>
+        <tr style="background-color: indigo">
+            <td><button type="reset" value="reset" class="o">C</button></td>
+            <td><input type="button" onclick="calculator(value)" value="0" class="o"></td>
+            <td><input type="button" onclick="maytinh()" id="result" value="=" class="o"></td>
+            <td><input type="button" onclick="calculator(value)" value="/" class="o"></td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+        function calculator(value){
+            document.getElementById("tinhtoan").value += value;
+        }
+        function maytinh (){
+            document.getElementById("tinhtoan").value = eval(document.getElementById("tinhtoan").value);
+        }
+</script>
+</html>
